@@ -8,7 +8,7 @@ class CodingPHPUnit extends TestCase
 {
 
     public function testConvert() {
-       $results = $this->convert_num('dua puluh tiga ribu lima ratus tiga puluh dua');
+       $results = $this->convert_num('tiga ratus lima puluh satu juta delapan ribu sembilan ratus empat');
        $this->expectOutputString($results);
     }
 
@@ -77,7 +77,6 @@ class CodingPHPUnit extends TestCase
                     if ($stack->top() > $part) {
                         if ($last >= 1000) {
                             $b = $this->spelled_out($part);
-                            // print_r(strpos($b,'belas'));
                             if(strpos($b,'belas') !== false ) {
                                 $check = 0;
                             } else {
